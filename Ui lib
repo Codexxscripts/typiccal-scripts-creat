@@ -1,9 +1,9 @@
 local Gui = loadstring(game:HttpGet("https://raw.githubusercontent.com/fuckg1thub/Fluent-Inspired-UI/refs/heads/main/fiui.luau"))()
 
-local MyUI = Gui.Window("typical ramen 🍜", "@codexxscripts", "rbxassetid://108159675385488", false, Color3.fromRGB(13, 105, 172))
+local MyUI = Gui.Window("@codexxscripts", "typical ramen 🍜", "rbxassetid://89486144961689", false, Color3.fromRGB(13, 105, 172))
 
 -- name: string, image: string
-local Farming = MyUI:Tab("Visual", "rbxassetid://108159675385488")
+local Farming = MyUI:Tab("Visual", "rbxassetid://89486144961689")
 
 -- Section (Name)
 local MainSection = Farming:AddSection("Section For Cools")
