@@ -3,7 +3,7 @@ local Gui = loadstring(game:HttpGet("https://raw.githubusercontent.com/fuckg1thu
 local MyUI = Gui.Window("@codexxscripts", "typical ramen 🍜", "rbxassetid://89486144961689", false, Color3.fromRGB(13, 105, 172))
 
 -- name: string, image: string
-local Farming = MyUI:Tab("Visual", "rbxassetid://89486144961689")
+local Farming = MyUI:Tab("Visual", "rbxassetid://")
 
 -- Section (Name)
 local MainSection = Farming:AddSection("Section For Cools")
