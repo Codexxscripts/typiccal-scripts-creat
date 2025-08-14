@@ -1,0 +1,38 @@
+local Gui = loadstring(game:HttpGet("https://raw.githubusercontent.com/fuckg1thub/Fluent-Inspired-UI/refs/heads/main/fiui.luau"))()
+
+local MyUI = Gui.Window("FluentInspired", "typical ramen 🍜", "rbxassetid://118689160394652", false, Color3.fromRGB(150, 63, 204))
+
+-- name: string, image: string
+local Farming = MyUI:Tab("Visual", "rbxassetid://82995574282299")
+
+-- Section (Name)
+local MainSection = Farming:AddSection("Section For Cools")
+local MiscSection = Farming:AddSection("For non cools")
+
+-- Toggle (Flag, Name, Callback)
+MainSection:AddToggle("toggle", "Toggle", print)
+
+-- Dropdown (Flag, Name, List, Callback) Refresh with Flags[Flag].Refresh(Newlist)
+MainSection:AddDropdown("drop", "Dropdown", game.Players:GetPlayers(), function(v)
+	print(v.UserId)
+end)	
+
+-- Button (Name, callback)
+MainSection:AddButton("Refresh List", function()
+	Flags.drop.Refresh({"Synapse X", "Kiwi X", "Delta X", "AWP", "Scamsploit", "Exitscamware"})
+end)
+
+-- Slider (Flag, Name, Default, Minimum, Maximum, Callback)
+MiscSection:AddSlider("fort", "Fotnite", 5, 69, 69, function(s) 
+	print(Flags.fort.Value)
+end)
+
+-- Textbox (Flag, Name, Placeholder, Callback)
+MiscSection:AddTextbox("name", "Your Name", "etner it!", function(text)
+	print(Flags.name.Text .. " : " .. string.len(text)) 
+end)
+
+-- Chooser/incremental (Flag, Name, Increment, Minimum, Maximum, Default, Callback)
+MiscSection:AddChooser("num", "Select Index", 1, 1, 25, 1, function(number)
+	print(number)
+end)
